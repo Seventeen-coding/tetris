@@ -13,6 +13,8 @@ static int __w_destory ( void *__this);
 static int  __w_set_pos(void *__this, int x, int y);
 static int __w_set_area(void *__this, int w, int h);
 
+static int    block_turn(block_t *block  ,int status);
+
 block_t *get_random_block(window_t *parent,int x,int y,int w, int h)
 {
     window_t *window = _w_create_window(parent,x,y,w,h);
@@ -35,7 +37,7 @@ static int    block_turn(block_t *block  ,int status)      //·­×ª
 {
      w_block_data_t * data = block->data->point_pos_data;
 
-      w_block_data_t temp;
+      w_block_data_t temp = ;
 
 
 //     block->base_block->point1->function.set_pos(block->base_block->point1->window,data->point1_x,data->point1_y);
@@ -52,7 +54,7 @@ static int __w_init(void *__this)
     w_block_data_t * data = get_block_data(type);
     block->data->point_pos_data = data; //point_pos_data
     int status = get_random_status();      //·­×ª
-    set_block_status(block,status);
+    block_turn(block,status);
 
     block->show = __w_show;
     block->hide = __w_hide;
