@@ -5,8 +5,8 @@
 //因此开启了就应该全部都给我开起来 用参数去定义 想makefile那样子编译时决定
 #include "test/game_test_demo_map.h"
 //#include "game/game_test_demo_modue.h"
-//#include "window/file/file_main_window.h"
-//#include "window/city/city_window.h"
-//#include "window/world/world_window.h"
+#include "window/background.h"
+#include "window/basic/w_point.h"
+#include "window/block.h"
 #endif // GAME_TEST_MODULE_H
 

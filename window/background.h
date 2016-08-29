@@ -4,7 +4,6 @@
 
 #include "game/game_window.h"
 #include "window/basic/w_text.h"
-#include "window/basic/w_list.h"
 
 typedef struct {
 
@@ -14,21 +13,11 @@ typedef struct{
     //window
     window_t *window;
     w_text_t *title;
-    w_text_t *line;
-    w_text_t *hero_text;
-    w_list_t *menu_list;
-    w_text_t * menu_item1;
-    w_text_t * menu_item2;
-    w_text_t*  menu_item3;
-    w_text_t*  menu_item4;
-    w_text_t * menu_item5;
-    w_text_t * menu_item6;
-    w_text_t*  menu_item7;
-    w_text_t*  menu_item8;
-    w_text_t*  menu_item9;
-    //menu_map
-    w_text_t *bottom;
-    //data
+    w_text_t *top_line;
+    w_text_t *bottom_line;
+    w_text_t *left_line;
+    w_text_t *right_line;
+   //data
     w_background_data_t   data;
 
     //function

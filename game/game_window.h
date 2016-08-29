@@ -36,6 +36,10 @@ typedef struct{
     struct game_window_t *__this;
    window_list_node_t *children_list;
     char * type;
+    //Absolute Position
+    //    int         __x;
+    //    int         __y;
+    //Relative Position
     int         __x;
     int         __y;
     int         __w;
@@ -43,7 +47,7 @@ typedef struct{
 
 }game_window_data_t;
 
-typedef struct window_t{
+typedef struct game_window_t{
     game_window_function_t function;
     game_window_data_t    data;
 }window_t;

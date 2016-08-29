@@ -18,7 +18,7 @@ static int __w_set_area(void *__this, int w, int h);
 //x y 展示没卵用
 window_t * _w_create_window(window_t *parent,int x, int y,int w,int h)
 {
-    window_t * window =  (window_t *)malloc(sizeof(window_t));//0, 0, 0, 0);
+    window_t * window =  (window_t *)malloc(sizeof(window_t));
     __w_init__(parent,window,x,y,w,h);     //这里想像的是通用的初始化
     return  window;
 }
@@ -44,6 +44,7 @@ int  __w_init__(window_t *parent, window_t * window ,int x, int y,int w,int h)
         if( parent == NULL) break;      //parent是空的就不往下处理
         list_insert_end(parent->data.children_list,window);
         window->data.type = parent->data.type;
+
     }while(0);
     return 0;
 }
@@ -100,6 +101,11 @@ int __w_destory (void *__this)
 static int  __w_set_pos(void *__this, int x, int y)
 {
     window_t * window =(window_t * )__this;
+    if(window->data.parent != NULL)
+    {
+        x = x+ window->data.parent->data.__x;
+        y = y+ window->data.parent->data.__y;
+    }
     window->data.__x = x;
     window->data.__y = y;
     return 0;

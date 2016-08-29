@@ -26,7 +26,13 @@ SOURCES += main.c \
     window/basic/w_item.c \
     window/basic/w_list.c \
     window/basic/w_map.c \
-    window/template_window.c
+    window/template_window.c \
+    game/game_env.c \
+    window/basic/w_point.c \
+    window/basic/w_block.c \
+    window/block.c \
+    game/game_random.c \
+    window/block_type.c
 
 include(deployment.pri)
 qtcAddDeployment()
@@ -64,5 +70,11 @@ HEADERS += \
     window/basic/w_item.h \
     window/basic/w_map.h \
     window/template.h \
-    window/template_window.h
+    window/template_window.h \
+    game/game_env.h \
+    window/basic/w_point.h \
+    window/block_type.h \
+    window/basic/w_block.h \
+    window/block.h \
+    game/game_random.h
 

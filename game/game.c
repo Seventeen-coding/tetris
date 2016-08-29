@@ -41,9 +41,9 @@ int game_config()
     do{
         //do something config
         /*游戏针对的是story 不关心 node和ｍap */
-        game_story_set(welcome_story_get());
-        game_node_set(welcome_node_get());
-        game_map_set(welcome_movie_map_get());
+    //        game_story_set(welcome_story_get());
+    //        game_node_set(welcome_node_get());
+    //        game_map_set(welcome_movie_map_get());
         status = GAME_CONFIG_FINISH;
     }while(0);
     GAME_BASE_DEBUG("game_config : %d \n\r",status);
